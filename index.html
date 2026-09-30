@@ -41,6 +41,42 @@
             line-height: 1.6;
         }
 
+        .features {
+            text-align: left;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .features h3 {
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features li {
+            color: #555;
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .features li:last-child {
+            border-bottom: none;
+        }
+
+        .features li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
         button {
             background-color: #667eea;
             color: white;
@@ -55,12 +91,40 @@
         button:hover {
             background-color: #764ba2;
         }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome! 👋</h1>
         <p>This is my first HTML project. I'm excited to start learning web development!</p>
+        
+        <div class="features">
+            <h3>Features:</h3>
+            <ul>
+                <li>A welcome heading</li>
+                <li>A short introduction</li>
+                <li>A styled button</li>
+                <li>A small JavaScript alert when the button is clicked</li>
+                <li>Responsive styling for mobile and desktop</li>
+            </ul>
+        </div>
+
         <button onclick="showMessage()">Click Me</button>
     </div>
 
